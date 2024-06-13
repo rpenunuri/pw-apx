@@ -19,11 +19,6 @@ export class HomePage extends BasePage {
     this.galaxySwiperActiveSlide = this.galaxySwiper.locator('.swiper-slide-visible.swiper-slide-active');
     this.galaxySwiperNextSlide = this.galaxySwiper.locator('.swiper-slide-visible.swiper-slide-next');
     this.galaxySwiperNavigationRightButton = this.galaxySwiper.locator('div.navigation-arrows div.navigation-arrow.right');
-    // this.revenuePlatformCardsHeader = this.page.getByRole('heading', { name: /Everything you need to run revenue/ });
-    // this.revenuePlatformCards = this.page.getByRole('listitem').filter({ has: this.page.locator('a.cl-tile-cta-card') });
-    // this.forecastPlatformCard = this.revenuePlatformCards.filter({ hasText: /Forecasting & RevOps/ });
-    // this.forecastPlatformCardDescription = this.forecastPlatformCard.locator('div[class*=__short-des]');
-    // this.forecastPlatformCardButton = this.forecastPlatformCard.locator('div[class*=__buttons]');
  }
 
   async expectedCondition() {
@@ -54,45 +49,4 @@ export class HomePage extends BasePage {
     await this.contactLink.click();
     return new ContactUsPage(this.page);
   }
-
-  // async assertForecasePlatformCardDescriptionIsVisible() {
-  //   await expect(this.forecastPlatformCardDescription).toBeVisible();
-  // }
-
-  // async assertForecasePlatformCardDescriptionIsNotVisible() {
-  //   await expect(this.forecastPlatformCardDescription).not.toBeVisible();
-  // }
-
-  // async assertForecastPlatformCardButtonIsVisible() {
-  //   await expect(this.forecastPlatformCardButton).toBeVisible();
-  // }
-
-  // async assertForecastPlatformCardButtonIsNotVisible() {
-  //   await expect(this.forecastPlatformCardButton).not.toBeVisible();
-  // }
-
-  // async mouseOverForecastPlatformCard() {
-  //   await this.forecastPlatformCard.hover();
-  // }
-
-  // async scrollToRevenuePlatformCardsHeader() {
-  //   await this.revenuePlatformCardsHeader.scrollIntoViewIfNeeded();
-  // }
-
-  // async clickForecastPlatformCardButton(): Promise<ForecastOverviewPage> {
-  //   await this.forecastPlatformCardButton.click();
-  //   return new ForecastOverviewPage(this.page);
-  // }
-
-  // async assertRevenuePlatformCardsTitleTextIsCorrect() {
-  //   const expectedRevenuePlatformCardsText = [/Forecasting & RevOps/, 
-  //                         /Conversation Intelligence/, 
-  //                         /Sales Engagement/, 
-  //                         /Deal Inspection & Management/,
-  //                         /Mutual Action Plans & Deal Rooms/,
-  //                         /Data Capture & Ingestion/
-  //                       ];
-    
-  //   await expect(this.revenuePlatformCards).toHaveText(expectedRevenuePlatformCardsText);
-  // }
 }
